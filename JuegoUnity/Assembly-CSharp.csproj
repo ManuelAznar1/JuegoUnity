@@ -50,6 +50,7 @@
     <Compile Include="Assets\Scripts\MovimientoCamara.cs" />
     <Compile Include="Assets\Scripts\MovimientoPersonaje.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\CambiarCamara.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BodyGuards\ReadMe.txt.txt" />
