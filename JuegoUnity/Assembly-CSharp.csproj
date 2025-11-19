@@ -51,9 +51,11 @@
     <Compile Include="Assets\Scripts\MovimientoPersonaje.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\ScriptMenu.cs" />
+    <Compile Include="Assets\Scripts\Audio.cs" />
     <Compile Include="Assets\Scripts\CambiarCamara.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Horror post apocalypse Sound Free\license pack.txt" />
     <None Include="Assets\BodyGuards\ReadMe.txt.txt" />
   </ItemGroup>
   <ItemGroup>
