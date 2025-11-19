@@ -78,7 +78,7 @@ public class MovimientoPersonaje : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
 
         // Bloquea el cursor
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 
         // 4. CONTROL DE ANIMACIONES
         
