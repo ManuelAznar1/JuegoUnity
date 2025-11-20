@@ -10,7 +10,6 @@ public class MenuPausa : MonoBehaviour
 
     void Update()
     {
-        // Al pulsar Escape (o la tecla P)
         if (Input.GetKeyDown(KeyCode.M))
         {
             if (juegoPausado)
