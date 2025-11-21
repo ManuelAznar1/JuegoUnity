@@ -6,12 +6,9 @@ public class LogicaCronometro : MonoBehaviour
     // Conexión a la UI
     public Text textoTiempo; 
     public GameObject pantallaGameOver; 
-
-    // --- ¡NUEVAS REFERENCIAS PARA CONGELAR! (Asignar en el Inspector) ---
-    // Debes arrastrar los scripts de movimiento (MovimientoPersonaje, MovimientoCamara, etc.) aquí.
     public MovimientoPersonaje scriptMovimientoJugador; 
-    public MovimientoCamara scriptMovimientoCamara; // Por ejemplo, el script de la cámara 1P
-    public MovimientoCamara scriptMovimientoCamara3P; // Por ejemplo, el script de la cámara 3P
+    public MovimientoCamara scriptMovimientoCamara;
+    public MovimientoCamara scriptMovimientoCamara3P;
     // ----------------------------------------------------------------------
     
     // **TIEMPO DE EJEMPLO:** 120 segundos (2 minutos).
@@ -41,51 +38,52 @@ public class LogicaCronometro : MonoBehaviour
         ActualizarDisplayTiempo(tiempoRestante);
     }
 
-    void Update()
+void Update()
+{
+    if (estaCorriendo)
     {
-        if (estaCorriendo)
+        if (tiempoRestante > 0)
         {
-            if (tiempoRestante > 0)
+            // Resta el tiempo...
+            tiempoRestante -= Time.deltaTime;
+            
+            if (tiempoRestante < 0)
             {
-                // Resta el tiempo transcurrido desde el último frame.
-                tiempoRestante -= Time.deltaTime;
+                tiempoRestante = 0;
+            }
+            
+            ActualizarDisplayTiempo(tiempoRestante);
+        }
+        else
+        {
+            // ********** LÓGICA DE GAME OVER (Tiempo Agotado) **********
+            if (estaCorriendo)
+            {
+                estaCorriendo = false; // Detener el cronómetro
+                Debug.Log("¡Tiempo terminado! Game Over.");
                 
-                if (tiempoRestante < 0)
+                // 1. CONGELAR MOVIMIENTO DESACTIVANDO SCRIPTS
+                if (scriptMovimientoJugador != null) scriptMovimientoJugador.enabled = false;
+                if (scriptMovimientoCamara != null) scriptMovimientoCamara.enabled = false;
+                if (scriptMovimientoCamara3P != null) scriptMovimientoCamara3P.enabled = false;
+
+                // 2. CONGELAR TIEMPO Y FÍSICA
+                Time.timeScale = 0f; 
+
+                // 3. Activar la pantalla de Game Over
+                if (pantallaGameOver != null)
                 {
-                    tiempoRestante = 0;
+                    pantallaGameOver.SetActive(true);
                 }
                 
-                ActualizarDisplayTiempo(tiempoRestante);
+                // 4. Liberar el ratón
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
-            else
-            {
-                // Lógica de Game Over: se ejecuta solo una vez al llegar a cero.
-                if (estaCorriendo)
-                {
-                    estaCorriendo = false; // Detener el cronómetro
-                    Debug.Log("¡Tiempo terminado! Congelando juego y movimientos.");
-                    
-                    // 1. CONGELAR MOVIMIENTO DESACTIVANDO SCRIPTS (FREEZE)
-                    if (scriptMovimientoJugador != null) scriptMovimientoJugador.enabled = false;
-                    if (scriptMovimientoCamara != null) scriptMovimientoCamara.enabled = false;
-                    if (scriptMovimientoCamara3P != null) scriptMovimientoCamara3P.enabled = false;
-
-                    // 2. CONGELAR TIEMPO (Física, Animaciones, etc.)
-                    Time.timeScale = 0f; 
-
-                    // 3. Activar la pantalla de Game Over
-                    if (pantallaGameOver != null)
-                    {
-                        pantallaGameOver.SetActive(true);
-                    }
-                    
-                    // 4. Liberar el ratón para los botones
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
-                }
-            }
+            // **********************************************************
         }
     }
+}
 
     // Función para actualizar el texto en pantalla.
     void ActualizarDisplayTiempo(float tiempoActual)
