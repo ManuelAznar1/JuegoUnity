@@ -57,7 +57,7 @@
     <Compile Include="Assets\Scripts\LogicaCronometro.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\ScriptMenu.cs" />
-    <Compile Include="Assets\Scripts\LogicaLlave.cs" />
+    <Compile Include="Assets\Scripts\InteraccionObjeto.cs" />
     <Compile Include="Assets\Scripts\Audio.cs" />
     <Compile Include="Assets\Scripts\CambiarCamara.cs" />
   </ItemGroup>

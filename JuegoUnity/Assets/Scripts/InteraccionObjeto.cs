@@ -1,22 +1,23 @@
 using UnityEngine;
 
-public class LogicaLlave : MonoBehaviour
+public class InteraccionObjeto : MonoBehaviour
 {
 // ⭐️ NUEVAS VARIABLES PÚBLICAS PARA CONFIGURAR EN EL INSPECTOR ⭐️
     // 1. Nombre del objeto que se mostrará en los mensajes (ej: "llave", "poción", "moneda")
     [Header("Configuración del Objeto")]
-    private string nombreDelObjeto = "llave"; 
+    private string nombreDelObjeto; 
     
     // 2. Duración del mensaje al recoger
     public float duracionMensaje = 3.0f; 
 
-    private const string INTERACTION_PREFIX = "Pulsa [E] para recoger la "; // Prefijo para el mensaje de interacción
+    private const string INTERACTION_PREFIX = "Pulsa [E] para recoger el/la "; // Prefijo para el mensaje de interacción
     
     private bool jugadorCerca = false; 
     private InformacionJuego informacionJuego;
 
     void Start()
     {
+        nombreDelObjeto = gameObject.name;
         informacionJuego = FindObjectOfType<InformacionJuego>();
 
         if (informacionJuego == null)
