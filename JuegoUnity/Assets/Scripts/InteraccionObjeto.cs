@@ -14,10 +14,21 @@ public class InteraccionObjeto : MonoBehaviour
     
     private bool jugadorCerca = false; 
     private InformacionJuego informacionJuego;
+    private Renderer objetoRenderer;
+    public Material materialResaltado;
+    private Material materialOriginal;
 
     void Start()
     {
         nombreDelObjeto = gameObject.name;
+
+        objetoRenderer = GetComponent<Renderer>();
+        if (objetoRenderer != null)
+        {
+            // Guardamos el material que tiene el objeto actualmente
+            materialOriginal = objetoRenderer.material;
+        }
+        
         informacionJuego = FindObjectOfType<InformacionJuego>();
 
         if (informacionJuego == null)
@@ -45,11 +56,14 @@ public class InteraccionObjeto : MonoBehaviour
         if (other.CompareTag("Persona"))
         {
             jugadorCerca = true;
+
+            if (objetoRenderer != null && materialResaltado != null)
+            {
+                objetoRenderer.material = materialResaltado;
+            }
             
             if (informacionJuego != null)
             {
-                // ⭐️ CREAR MENSAJE DE INTERACCIÓN DINÁMICA ⭐️
-                // Resultado: "Pulsa [E] para recoger el Objeto"
                 string mensajeCompleto = INTERACTION_PREFIX + nombreDelObjeto;
                 informacionJuego.SetMessage(mensajeCompleto, true); 
             }
@@ -61,6 +75,11 @@ public class InteraccionObjeto : MonoBehaviour
         if (other.CompareTag("Persona"))
         {
             jugadorCerca = false;
+
+            if (objetoRenderer != null && materialOriginal != null)
+            {
+                objetoRenderer.material = materialOriginal;
+            }
             
             if (informacionJuego != null)
             {
