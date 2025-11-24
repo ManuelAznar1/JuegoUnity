@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections; // Necesario para usar Coroutines
 
 public class InteraccionObjeto : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class InteraccionObjeto : MonoBehaviour
     private Renderer objetoRenderer;
     public Material materialResaltado;
     private Material materialOriginal;
+    public float velocidadAcercamiento;
+    private Transform targetPlayer;
 
     void Start()
     {
@@ -57,6 +60,9 @@ public class InteraccionObjeto : MonoBehaviour
         {
             jugadorCerca = true;
 
+            // OBTENER LA POSICIÓN DEL JUGADOR
+            targetPlayer = other.transform;
+
             if (objetoRenderer != null && materialResaltado != null)
             {
                 objetoRenderer.material = materialResaltado;
@@ -89,7 +95,37 @@ public class InteraccionObjeto : MonoBehaviour
     }
 
     private void RecogerObjeto()
+{
+        // ⭐️ NUEVO: Deshabilitamos el Collider para que no siga detectando al jugador ⭐️
+        Collider objetoCollider = GetComponent<Collider>();
+        if (objetoCollider != null)
+        {
+            objetoCollider.enabled = false;
+        }
+
+        // Si el jugador está cerca (targetPlayer está asignado), iniciamos el movimiento
+        if (targetPlayer != null)
+        {
+            StartCoroutine(MoveToPlayer());
+        }
+}
+
+    private IEnumerator MoveToPlayer()
     {
+        // El bucle se ejecutará hasta que el objeto esté muy cerca del jugador
+        while (Vector3.Distance(transform.position, targetPlayer.position) > 0.1f)
+        {
+            // Mueve el objeto hacia la posición del jugador usando Linear Interpolation (Lerp)
+            transform.position = Vector3.Lerp(
+                transform.position, 
+                targetPlayer.position, 
+                Time.deltaTime * velocidadAcercamiento
+            );
+
+            // Esto pausa la corutina por un frame, permitiendo que se mueva gradualmente
+            yield return null; 
+        }
+        
         Destroy(gameObject);
     }
     
