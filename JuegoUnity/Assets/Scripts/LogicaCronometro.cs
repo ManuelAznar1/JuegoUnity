@@ -12,7 +12,7 @@ public class LogicaCronometro : MonoBehaviour
     // ----------------------------------------------------------------------
     
     // **TIEMPO DE EJEMPLO:** 120 segundos (2 minutos).
-    private const float TIEMPO_MAXIMO = 10f; 
+    private const float TIEMPO_MAXIMO = 120f; 
     
     private float tiempoRestante; 
     private bool estaCorriendo = false; 
