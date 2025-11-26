@@ -51,6 +51,7 @@
     <Compile Include="Assets\Scripts\MenuPausa.cs" />
     <Compile Include="Assets\ALP_Assets\contemporary house\scripits\PlayerController.cs" />
     <Compile Include="Assets\Scripts\InformacionJuego.cs" />
+    <Compile Include="Assets\Scripts\AbrirCerrarPuerta.cs" />
     <Compile Include="Assets\Scripts\MovimientoPersonaje.cs" />
     <Compile Include="Assets\Scripts\PantallaCargaEscena.cs" />
     <Compile Include="Assets\Scripts\PasoDeEscena.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Assets\Scripts\LogicaCronometro.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\ALP_Assets\contemporary house\scripits\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\PlayerRaycaster.cs" />
     <Compile Include="Assets\Scripts\ScriptMenu.cs" />
     <Compile Include="Assets\Scripts\InteraccionObjeto.cs" />
     <Compile Include="Assets\Scripts\Audio.cs" />
