@@ -51,25 +51,27 @@
     <Compile Include="Assets\Scripts\MenuPausa.cs" />
     <Compile Include="Assets\ALP_Assets\contemporary house\scripits\PlayerController.cs" />
     <Compile Include="Assets\Scripts\InformacionJuego.cs" />
-    <Compile Include="Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DoorMech.cs" />
-    <Compile Include="Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
     <Compile Include="Assets\Scripts\AbrirCerrarPuerta.cs" />
     <Compile Include="Assets\Scripts\MovimientoPersonaje.cs" />
     <Compile Include="Assets\Scripts\PantallaCargaEscena.cs" />
     <Compile Include="Assets\Scripts\PasoDeEscena.cs" />
+    <Compile Include="Assets\ALP_Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
     <Compile Include="Assets\Scripts\MenuGameOver.cs" />
     <Compile Include="Assets\Scripts\LogicaCronometro.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\ALP_Assets\contemporary house\scripits\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PlayerRaycaster.cs" />
     <Compile Include="Assets\Scripts\ScriptMenu.cs" />
+    <Compile Include="Assets\ALP_Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DoorMech.cs" />
     <Compile Include="Assets\Scripts\InteraccionObjeto.cs" />
+    <Compile Include="Assets\ALP_Assets\RealisticRain\Script\VFXController.cs" />
     <Compile Include="Assets\Scripts\Audio.cs" />
     <Compile Include="Assets\Scripts\CambiarCamara.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\ALP_Assets\RealisticRain\Documentation\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
@@ -77,8 +79,9 @@
     <None Include="Assets\ALP_Assets\Horror post apocalypse Sound Free\license pack.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\ALP_Assets\Lana Studio\Hyper Casual FX\Demo\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\FreeOpenBuilding_1.1.2\FOB_Props\Material\UseMaterialFromBuildingFolder.txt" />
+    <None Include="Assets\ALP_Assets\FreeOpenBuilding_1.1.2\FOB_Props\Material\UseMaterialFromBuildingFolder.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\ALP_Assets\contemporary house\scripits\read me.txt" />
@@ -89,8 +92,8 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\FreeOpenBuilding_1.1.2\Important Info!.txt" />
-    <None Include="Assets\FreeOpenBuilding_1.1.2\FOB_Props\Texture\UseTextureFromBuildingFolder.txt" />
+    <None Include="Assets\ALP_Assets\FreeOpenBuilding_1.1.2\Important Info!.txt" />
+    <None Include="Assets\ALP_Assets\FreeOpenBuilding_1.1.2\FOB_Props\Texture\UseTextureFromBuildingFolder.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\ALP_Assets\BodyGuards\ReadMe.txt.txt" />
@@ -1099,6 +1102,10 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.3f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1135,12 +1142,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor">
@@ -1245,6 +1252,10 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Mathematics">
