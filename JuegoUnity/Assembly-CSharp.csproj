@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\MenuGameOver.cs" />
     <Compile Include="Assets\Scripts\LogicaCronometro.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\SeguimientoCamara.cs" />
     <Compile Include="Assets\ALP_Assets\contemporary house\scripits\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PlayerRaycaster.cs" />
     <Compile Include="Assets\Scripts\ScriptMenu.cs" />

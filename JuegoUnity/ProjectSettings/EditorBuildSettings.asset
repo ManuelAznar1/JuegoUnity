@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: bf553bcfd337d7e4c951ce39329ef670
   - enabled: 1
-    path: Assets/Scenes/Nivel1(Antiguo).unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Nivel1.unity
+    guid: 22cf26aee7758b94db86a5c6c0df7c7b
   - enabled: 1
     path: Assets/Scenes/PantallaCarga.unity
     guid: 2be6650feae09f940af07dbaf5eb963f
   - enabled: 1
-    path: Assets/Scenes/Nivel2.unity
-    guid: b225d57fb1109e44ebef769fc58fd990
+    path: Assets/Scenes/Nivel2(PRUEBA).unity
+    guid: 168e48ae56fdaac4893492a38bc281af
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
