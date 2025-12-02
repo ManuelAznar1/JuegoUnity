@@ -50,7 +50,6 @@
     <Compile Include="Assets\Scripts\FindeJuego.cs" />
     <Compile Include="Assets\Scripts\MovimientoCamara.cs" />
     <Compile Include="Assets\Scripts\MenuPausa.cs" />
-    <Compile Include="Assets\ALP_Assets\contemporary house\scripits\PlayerController.cs" />
     <Compile Include="Assets\Scripts\MenuFin.cs" />
     <Compile Include="Assets\Scripts\InformacionJuego.cs" />
     <Compile Include="Assets\Scripts\AbrirCerrarPuerta.cs" />
@@ -60,9 +59,9 @@
     <Compile Include="Assets\ALP_Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
     <Compile Include="Assets\Scripts\MenuGameOver.cs" />
     <Compile Include="Assets\Scripts\LogicaCronometro.cs" />
+    <Compile Include="Assets\Scripts\AbrirPuertaHingeJoint.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\SeguimientoCamara.cs" />
-    <Compile Include="Assets\ALP_Assets\contemporary house\scripits\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PlayerRaycaster.cs" />
     <Compile Include="Assets\Scripts\ScriptMenu.cs" />
     <Compile Include="Assets\ALP_Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DoorMech.cs" />
@@ -87,7 +86,6 @@
     <None Include="Assets\ALP_Assets\FreeOpenBuilding_1.1.2\FOB_Props\Material\UseMaterialFromBuildingFolder.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\ALP_Assets\contemporary house\scripits\read me.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

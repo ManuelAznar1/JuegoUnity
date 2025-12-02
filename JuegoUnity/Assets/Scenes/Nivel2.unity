@@ -4353,7 +4353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FindeJuego
   objetoMenuFinDeJuego: {fileID: 1662016461}
   ControlJugador: {fileID: 285823082}
-  Camara: {fileID: 891682248}
+  Camara: {fileID: 784814379}
 --- !u!1 &808100404
 GameObject:
   m_ObjectHideFlags: 0

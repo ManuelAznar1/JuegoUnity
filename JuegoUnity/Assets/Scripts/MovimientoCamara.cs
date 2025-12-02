@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class MovimientoCamara : MonoBehaviour
 {
-[SerializeField]
+    [SerializeField]
     public float sensitivity = 5.0f;
     [SerializeField]
     public float smoothing = 2.0f;
@@ -33,6 +33,7 @@ public class MovimientoCamara : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
         // md is mosue delta
+        // Input.GetAxisRaw("Mouse X/Y") lee tanto el ratón como el Stick Derecho del mando.
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
         
@@ -44,7 +45,7 @@ public class MovimientoCamara : MonoBehaviour
         mouseLook += smoothV;
 
         // **PASO CLAVE: Limitar el ángulo vertical (eje Y de mouseLook)**
-        mouseLook.y = Mathf.Clamp(mouseLook.y, minY, maxY); //
+        mouseLook.y = Mathf.Clamp(mouseLook.y, minY, maxY); 
 
         // vector3.right means the x-axis (rotación vertical de la cámara)
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
