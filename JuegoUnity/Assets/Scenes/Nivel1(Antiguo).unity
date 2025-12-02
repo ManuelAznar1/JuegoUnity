@@ -2886,6 +2886,7 @@ MonoBehaviour:
   scriptMovimientoJugador: {fileID: 0}
   scriptMovimientoCamara: {fileID: 0}
   scriptMovimientoCamara3P: {fileID: 0}
+  tiempoRestante: 0
 --- !u!114 &1588306643
 MonoBehaviour:
   m_ObjectHideFlags: 0

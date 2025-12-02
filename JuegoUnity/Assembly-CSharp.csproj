@@ -47,9 +47,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.3f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\FindeJuego.cs" />
     <Compile Include="Assets\Scripts\MovimientoCamara.cs" />
     <Compile Include="Assets\Scripts\MenuPausa.cs" />
     <Compile Include="Assets\ALP_Assets\contemporary house\scripits\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\MenuFin.cs" />
     <Compile Include="Assets\Scripts\InformacionJuego.cs" />
     <Compile Include="Assets\Scripts\AbrirCerrarPuerta.cs" />
     <Compile Include="Assets\Scripts\MovimientoPersonaje.cs" />
@@ -613,6 +615,14 @@
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.3f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.3f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

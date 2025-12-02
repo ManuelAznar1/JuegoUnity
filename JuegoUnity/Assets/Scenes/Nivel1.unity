@@ -9889,7 +9889,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.5
   far clip plane: 50
   field of view: 60
   orthographic: 1
@@ -9922,7 +9922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 948174805}
-  height: 3
+  heightOffset: 3
 --- !u!1 &2129467068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1873801393163501925, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
